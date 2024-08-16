@@ -11,7 +11,10 @@ estado bloqueou os professores de acessarem o youtube, com isso, ela estava leva
 esse sistema para solucionar esse problema, onde ela nao acessa o youtube, mas consegue baixar tudo normalmente e tudo no seu horario de trabalho.</h4>
 <br>
 <h2>Como utilizar o sistema ?</h2>
-<h4>° Estou disponibilizando alem do codigo completo, uma pasta com 'exe', essa pasta contem os conversores para audio 'mp3' da melhor qualidade, e para isso basta colocar a pasta no " C: " ( diretorio raiz do computador )</h4>
+<br>
+<h4> Instalar o FFMPEG conversor de video para audio, entre no seu CMD e coloque esse comando ' winget install "FFmpeg (Essentials Build)" ' depois que o CMD instalar o pacote completo, de um 'where ffmpeg' ele irá retornar o diretório absoluto de onde foi instalado</h4>
+<h4> Com isso, copie os aquivos e crie uma pasta com o nome de  'FFMPEG'  e adicione no " C: " ( diretorio raiz do computador ) </h4>
+<br>
 <h3>Deve ficar parecido com esse exemplo:</h3>
 <br>
 
@@ -25,6 +28,7 @@ esse sistema para solucionar esse problema, onde ela nao acessa o youtube, mas c
 <h3>° Ter instalado o Visual Code no Pc ou qualquer outro que possa executar o sistema</h3>
 <br>
 <h2> Criar o Executável </h32>
+<br>
 <h2> Uma boa opção é criar um exe do meu sistema, utilizando o propio flet vc pode gerar um exe para rodar no windows</h2>
 <h4> execute no seu bash = flet pack youTube.py --icon=hacker.ico </h4>
 <h4>Isso  criara um programa exe com o icone disponivel da pasta </h4>
