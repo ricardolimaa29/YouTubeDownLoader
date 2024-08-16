@@ -1,8 +1,7 @@
 import flet as ft
 import yt_dlp
-import time
 
-class TodoApp(ft.Column):
+class YouTApp(ft.Column):
 
     def __init__(self):
         super().__init__()
@@ -10,14 +9,14 @@ class TodoApp(ft.Column):
         self.video_info_view = ft.Column()
         self.thumbnail_image = ft.Image(visible=False)
         self.loading_animation = ft.ProgressRing(visible=False)  # Animação de carregamento
-        self.tasks_view = ft.Column(scroll=ft.ScrollMode.AUTO)  # Histórico de downloads com scroll
+        self.tasks_view = ft.Column(scroll=ft.ScrollMode.AUTO)  # Histórico de downloads
         self.width = 600
         self.controls = [
             ft.Row(
                 controls=[
                     self.new_task,
                     ft.FloatingActionButton(
-                        icon=ft.icons.ADD, on_click=self.add_clicked
+                        icon=ft.icons.SEARCH, on_click=self.add_clicked
                     ),
                 ],
             ),
@@ -33,7 +32,8 @@ class TodoApp(ft.Column):
             self.loading_animation,  # Animação de carregamento
             ft.Container(
                 self.tasks_view,
-                height=300,  # Define a altura do container que vai segurar o histórico
+                height=450,  # Define a altura do HISTORICO
+                width=550
             ),
         ]
 
@@ -84,12 +84,12 @@ class TodoApp(ft.Column):
             self.update()
             return
 
-        # Extraia as informações do vídeo antes de iniciar o download
+        # Extrai as informações do vídeo
         info_dict = self.extract_video_info(link)
         if not info_dict:
             return
 
-        # Mostra a animação de carregamento
+        # animação de carregamento
         self.loading_animation.visible = True
         self.update()
 
@@ -101,6 +101,7 @@ class TodoApp(ft.Column):
                 'preferredcodec': 'mp3',
                 'preferredquality': '192',
             }] if format == 'mp3' else [],
+            'ffmpeg_location': 'C:\\FFMPEG\\ffmpeg.exe',
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -108,10 +109,10 @@ class TodoApp(ft.Column):
                 ydl.download([link])
                 completion_text = ft.Text(f"DOWNLOAD CONCLUÍDO EM FORMATO {format.upper()}!", color="yellow", weight="bold")
 
-                # Adiciona ao histórico com a miniatura
+                # Adiciona ao histórico 
                 self.tasks_view.controls.insert(0, ft.Column(controls=[
                     ft.Text(f"Título: {info_dict['title']}"),
-                    ft.Image(src=info_dict['thumbnail'], width=200, height=150),
+                    ft.Image(src=info_dict['thumbnail'], width=250, height=300),
                     ft.Text(f"Formato: {format.upper()}"),
                     ft.Text(f"Link: {link}"),
                     completion_text
@@ -121,22 +122,17 @@ class TodoApp(ft.Column):
             except Exception as ex:
                 self.video_info_view.controls.append(ft.Text(f"Erro durante o download: {ex}", color="red"))
 
-        # Esconde a animação de carregamento após o download
+        # Esconde a animação
         self.loading_animation.visible = False
         self.update()
 
 def main(page: ft.Page):
-    page.title = "YouTubeDownloader - for Telma Rodrigues"
+    page.title = "YouTubeDownloader"
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.window_maximized = True  # Inicia o aplicativo maximizado, com botões de controle visíveis
-    page.icon = "you.ico"
-    page.window_minimizable = True
-    page.window_resizable = True
-    page.window_maximizable = True
+    page.window_maximized = True
     page.update()
 
-    todo = TodoApp()
-    page.add(todo)
+    youT = YouTApp()
+    page.add(youT)
 
 ft.app(target=main)
-
