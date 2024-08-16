@@ -1,7 +1,8 @@
 # YouTubeDownLoader
 <h3>Sistema para efetuar downloads de videos e converter audios</h3>
 <br>
-![image](https://github.com/user-attachments/assets/53a7d4df-955f-43ac-bc69-fd7be39fc27c)
+
+![sistema](https://github.com/user-attachments/assets/c59f4480-196c-4d07-a5b6-5179da773d5c)
 
 <br>
 <h4>A principio criei esse sistema para atender as demandas da minha mãe, onde ela sempre baixava umas musicas para alegrar a aula de seus alunos...
@@ -13,7 +14,8 @@ esse sistema para solucionar esse problema, onde ela nao acessa o youtube, mas c
 <h4>° Estou disponibilizando alem do codigo completo, uma pasta com 'exe', essa pasta contem os conversores para audio 'mp3' da melhor qualidade, e para isso basta colocar a pasta no " C: " ( diretorio raiz do computador )</h4>
 <h3>Deve ficar parecido com esse exemplo:</h3>
 <br>
-![image](https://github.com/user-attachments/assets/f3357f28-0374-41bb-b084-6601bad1948a)
+![diretório](https://github.com/user-attachments/assets/eb827e69-02e2-455c-9ae8-764019f2bba7)
+
 <br>
 <h3>° Ter instalado o Python no Pc </h3>
 <h3>° Instalar as bibliotecas necessarias, como "yt_dlp" e o "flet" </h3>
