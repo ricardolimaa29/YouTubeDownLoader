@@ -14,6 +14,7 @@ esse sistema para solucionar esse problema, onde ela nao acessa o youtube, mas c
 <h4>° Estou disponibilizando alem do codigo completo, uma pasta com 'exe', essa pasta contem os conversores para audio 'mp3' da melhor qualidade, e para isso basta colocar a pasta no " C: " ( diretorio raiz do computador )</h4>
 <h3>Deve ficar parecido com esse exemplo:</h3>
 <br>
+
 ![diretório](https://github.com/user-attachments/assets/eb827e69-02e2-455c-9ae8-764019f2bba7)
 
 <br>
