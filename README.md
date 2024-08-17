@@ -29,7 +29,7 @@ esse sistema para solucionar esse problema, onde ela nao acessa o youtube, mas c
 <br>
 <h2> Criar o Executável </h32>
 <br>
-<h2> Uma boa opção é criar um exe do meu sistema, utilizando o propio flet vc pode gerar um exe para rodar no windows</h2>
+<h2> Uma boa opção é criar um exe do meu sistema, utilizando o próprio flet gere um exe para rodar no windows</h2>
 <h4> execute no seu bash = flet pack youTube.py --icon=hacker.ico </h4>
 <h4>Isso  criara um programa exe com o icone disponivel da pasta </h4>
 <br>
