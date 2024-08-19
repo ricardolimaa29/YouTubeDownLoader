@@ -1,5 +1,5 @@
 # YouTubeDownLoader
-<h3>Sistema para efetuar downloads de videos e converter audios</h3>
+<h3>Sistema para efetuar downloads de videos e audio</h3>
 <br>
 
 ![sistema](https://github.com/user-attachments/assets/c59f4480-196c-4d07-a5b6-5179da773d5c)
